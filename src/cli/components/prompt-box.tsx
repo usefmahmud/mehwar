@@ -1,5 +1,7 @@
 import { Box, Text } from "ink";
 import TextInput from "ink-text-input";
+import { useState } from "react";
+import { PROMPT_PLACEHOLDER } from "../constants/prompt-placeholder.ts";
 
 export type PromptBoxProps = {
   value: string;
@@ -8,6 +10,11 @@ export type PromptBoxProps = {
 };
 
 export function PromptBox({ value, onChange, onSubmit }: PromptBoxProps) {
+  const [placeholder] = useState(
+    () =>
+      PROMPT_PLACEHOLDER[Math.floor(Math.random() * PROMPT_PLACEHOLDER.length)],
+  );
+
   return (
     <Box
       borderStyle="single"
@@ -21,7 +28,7 @@ export function PromptBox({ value, onChange, onSubmit }: PromptBoxProps) {
         value={value}
         onChange={onChange}
         onSubmit={onSubmit}
-        placeholder="Add authentication to this project…"
+        placeholder={placeholder}
       />
     </Box>
   );
