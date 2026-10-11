@@ -12,12 +12,14 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/figlet": "^1.7.0",
     "@types/react": "^19.3.0"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
+    "figlet": "^1.12.0",
     "ink": "^8.0.0",
     "ink-text-input": "^6.0.0",
     "react": "^19.3.0",
