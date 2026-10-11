@@ -1,0 +1,26 @@
+{
+  "name": "mehwar-agent",
+  "module": "src/cli/index.tsx",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "mehwar": "src/cli/index.tsx"
+  },
+  "scripts": {
+    "dev": "bun src/cli/index.tsx",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.3.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "ink": "^8.0.0",
+    "ink-text-input": "^6.0.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}
