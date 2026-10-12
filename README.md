@@ -1,15 +1,16 @@
-# mehwar-agent
+# mehwar
+A small TypeScript agent.
 
-To install dependencies:
+### Project structure:
 
-```bash
-bun install
+```
+src/
+├── core/        # currently contains shared types: Message, ContentBlock, AgentEvent
+├── providers/   # LLMProvider interface and the OpenAI-compatible provider
+├── tools/       # tool registry and built-in tools
+└── agent/       # the main agent loop
 ```
 
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.3.12. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+<div style="background:grey; padding: 1px; border-radius: 5px; line-height:0px;">
+<img src="./assets/screenshots/mehwar-demo-1.png" style="border-radius: 5px;" />
+</div>
